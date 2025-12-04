@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Soojin6943/yeoul-night-photo.git/static/css/main.f72aa8e3.css",
-    "main.js": "/Soojin6943/yeoul-night-photo.git/static/js/main.fc4c290f.js",
-    "static/media/slick.svg": "/Soojin6943/yeoul-night-photo.git/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/Soojin6943/yeoul-night-photo.git/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/Soojin6943/yeoul-night-photo.git/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/Soojin6943/yeoul-night-photo.git/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/Soojin6943/yeoul-night-photo.git/index.html",
-    "main.f72aa8e3.css.map": "/Soojin6943/yeoul-night-photo.git/static/css/main.f72aa8e3.css.map",
-    "main.fc4c290f.js.map": "/Soojin6943/yeoul-night-photo.git/static/js/main.fc4c290f.js.map"
+    "main.css": "/Soojin6943/yeoul-night-photo/static/css/main.da05cddc.css",
+    "main.js": "/Soojin6943/yeoul-night-photo/static/js/main.fc4c290f.js",
+    "static/media/slick.svg": "/Soojin6943/yeoul-night-photo/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Soojin6943/yeoul-night-photo/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Soojin6943/yeoul-night-photo/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Soojin6943/yeoul-night-photo/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Soojin6943/yeoul-night-photo/index.html",
+    "main.da05cddc.css.map": "/Soojin6943/yeoul-night-photo/static/css/main.da05cddc.css.map",
+    "main.fc4c290f.js.map": "/Soojin6943/yeoul-night-photo/static/js/main.fc4c290f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f72aa8e3.css",
+    "static/css/main.da05cddc.css",
     "static/js/main.fc4c290f.js"
   ]
 }
