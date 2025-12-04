@@ -1,29 +1,39 @@
 .frame-select-wrapper {
-    top: 77px;
-    bottom: 0px;
-    position: relative;
-    width: 100vw;
-    padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    padding: 25px 20px 96px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    overflow: hidden;
 }
-
 
 .slick-slide div {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto !important;
 }
 
 .slick-slider {
-    width: 100%
+    width: 100%;
+    max-width: 780px;
 }
 
 .frame-wrapper {
     position: relative;
+    padding: 10px;
 }
 
 .frame-thumbnail {
+    width: 100%;
+    aspect-ratio: 4410/1800;
+    object-fit: cover;
+    border-radius: 10px;
     transition: 0.2s;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .frame-thumbnail.selected {
@@ -38,6 +48,8 @@
     right: 20px;
     position: fixed;
     padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .check-btn.active {

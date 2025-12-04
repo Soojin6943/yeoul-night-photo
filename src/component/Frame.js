@@ -10,16 +10,25 @@ import { createFinalImage } from '../utils/createFinalImage';
 
 
 const FRAME_OPTIONS = [
-    { id: 'basic', name: '기본', url: '/frames/frame-basic.png' },
-    { id: 'test1', name: '기본', url: '/frames/frame-2.png' },
-    { id: 'test2', name: '기본', url: '/frames/frame-basic.png' },
+    // { id: 'basic', name: '기본', url: '/frames/frame-basic.png' },
+    // { id: 'test2', name: '기본', url: '/frames/frame-christmas.png' },
+    // { id: 'test3', name: '기본', url: '/frames/frame-3.png' },
+    // { id: 'test4', name: '기본', url: '/frames/frame-4.png' },
+    // { id: 'test5', name: '기본', url: '/frames/frame-5.png' },
+    // { id: 'test7', name: '기본', url: '/frames/frame-7.png' },
+    { id: 'basic', name: '기본', url: '/frames/frame-journey.png' },
+    { id: 'frame2', name: '기본', url: '/frames/frame-ticket.png' },
 ]
 
 const FRAME_THUMBNAILS = [
-    { id: 'basic', url: '/thumbnails/thumb-basic.png' },
-    { id: 'test1', url: '/thumbnails/thumb-basic.png' },
-    { id: 'test2', url: '/thumbnails/thumb-basic.png' },
-
+    // { id: 'basic', url: '/thumbnails/thumb-basic.png' },
+    // { id: 'test2', url: '/thumbnails/thumb-christmas.png' },
+    // { id: 'test3', url: '/thumbnails/thumb-4.png' },
+    // { id: 'test4', url: '/thumbnails/thumb-4.png' },
+    // { id: 'test5', url: '/thumbnails/thumb-5.png' },
+    // { id: 'test7', url: '/thumbnails/thumb-7.png' },
+    { id: 'basic', url: '/thumbnails/thumb-journey.png' },
+    { id: 'frame2', url: '/thumbnails/thumb-ticket.png' },
 ]
 
 export default function Frame() {
@@ -64,13 +73,29 @@ export default function Frame() {
         const formData = new FormData();
         formData.append('file', file);
 
-        const response = fetch('http://172.20.10.60:8080/upload', {
+        const response = fetch('https://boisterous-carla-subcommissarial.ngrok-free.dev/upload', {
             method: 'POST',
             body: formData
         })
 
         const url = (await response).text();
         return url;
+    }
+
+    async function shareImage(file) {
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            try {
+                await navigator.share({
+                    files: [file],
+                    title: "포토부스 사진",
+                    text: "여울인의 밤 포토부스",
+                });
+            } catch (error) {
+                console.log("공유 실패", error);
+            }
+        } else {
+            alert("이 브라우저는 공유를 지원하지 않습니다.");
+        }
     }
 
     async function goNext() {
@@ -80,9 +105,12 @@ export default function Frame() {
 
         var file = base64ToFile(finalImageBase64, 'finalImage.jpg');
 
-        const uploadedUrl = await uploadToServer(file);
+        // const uploadedUrl = await uploadToServer(file);
+        // setQrUrl(uploadedUrl);
 
-        setQrUrl(uploadedUrl);
+        await shareImage(file);
+        
+        setPopupVisible(false);
 
     }
 
@@ -90,7 +118,7 @@ export default function Frame() {
         <div className='frame-select-wrapper'>
             <PreviewFrame photos={photos} frameUrl={selectedFrame.url} />
 
-            <LoadingPopup visible={popupVisible} qrUrl={qrUrl} />
+            {/* <LoadingPopup visible={popupVisible} qrUrl={qrUrl} /> */}
 
             <Slider {...settings}>
                 {FRAME_OPTIONS.map(frame => {

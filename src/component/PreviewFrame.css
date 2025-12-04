@@ -1,15 +1,15 @@
 .preview-frame {
-    margin-bottom: 100px;
-    left: 20%;
+    margin: 0 auto 10px;
     position: relative;
-    width: 482px;
-    height: 731px;
-    background-color: gray;
+    width: min(90vw, 520px);
+    aspect-ratio: 4500 / 8000;
+    background-color: #e7e7e7;
     overflow: hidden;
+    border-radius: 12px;
 }
 .frame-slot{
-    width: 197px;
-    height: 303px;
+    width: 42.88%;
+    height: 35.85%;
     position: absolute;
     overflow: hidden;
     z-index: 1;
@@ -24,23 +24,23 @@
 }
 
 .slot-0 {
-    top: 32px;
-    left: 32px;
+    top: 4.06%;
+    left: 6.04%;
 }
 
 .slot-1 {
-    top: 32px;
-    left: 252px;
+    top: 4.06%;
+    left: 51.07%;
 }
 
 .slot-2 {
-    top: 338px;
-    left: 32px;
+    top: 41.08%;
+    left: 6.04%;
 }
 
 .slot-3 {
-    top: 338px;
-    left: 252px;
+    top: 41.08%;
+    left: 51.07%;
 }
 
 .frame-overlay {
